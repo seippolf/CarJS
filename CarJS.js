@@ -3,6 +3,5 @@ function airflowActual() {
     var af = document.getElementById('afRatio').value;
     var bsfc = document.getElementById('bsFuelConsumption').value; 
     var wa = hp * af * (bsfc/60);
-    //document.getElementById("changep").innerHTML = wa;
     alert(wa);
 }
