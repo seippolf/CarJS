@@ -7,9 +7,28 @@
         </br>
         <input type="text" placeholder="Air/Fuel Ratio" id="afRatio">
         </br>
-        <input type="text" placeholder="Brake Specific Fuel Consumption" id="bsFuelConsumption">
-        <button onclick="airflowActual()">Click</button>
-        <p id="airflowCalc">Airflowactual:</p>
-        <button onclick="mapRequired()">click2</button>
+        <input type="text" placeholder="BSFC" id="bsFuelConsumption">
+        </br>
+        <button onclick="airflowActual()">Calculate</button>
+        <p id="airflowCalc">Airflowactual: </p>
+        <input type="text" placeholder="Manifold Temperature" id="manTemperature">
+        <select id="tempUnit">
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+        </select>
+        </br>
+        <input type="text" placeholder="Volumetric Efficiency" id="volEfficiency">
+        </br>
+        <input type="text" placeholder="Engine Speed (RPM)" id="engineSpeed">
+        </br>
+        <input type="text" placeholder="Volumetric Displacement" id="volDisplacement">
+        <select id="volUnit">
+            <option>CC</option>
+            <option>Liter(s)</option>
+            <option>CI</option>
+        </select>
+        </br>        
+        <button onclick="mapRequired()">Calculate</button>
+        <p id="mapReq">Manifold Pressure Requirements: </p>
     </body>
 </html>
