@@ -1,3 +1,27 @@
+  /*
+    Sources:
+        https://www.turbobygarrett.com/turbobygarrett/choosing_turbo
+    
+    
+    Wa = HP * (A/F) * (BSFC/60)
+    
+        Wa: Airflowactual
+        HP: Horsepower Target (flywheel)
+        A/F: Air/Fuel Ratio
+        BSFC/60: Brake Specific Fuel Consumption per hour --> per minute 
+            ^This is measured on a dynamometer
+    
+    MAPreq = (Wa * R * (460 + Tm)) / (VE * (N/2) * Vd)
+    
+        MAPreq: Manifold Absolute Pressure required to reach Horsepower target
+        Wa: Airflowactual
+        R = Gas Constant = 639.6
+        Tm = Intake Manifold Temperature (degrees F)
+        VE = Volumetric Efficiency
+        N = Engine Speed (RPM)
+        Vd = Volumetric displacement (In Cubic Inches)
+    
+    */
 function airflowActual() {
     var hp = document.getElementById('hpTarget').value;
     var af = document.getElementById('afRatio').value;
