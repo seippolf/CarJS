@@ -22,6 +22,8 @@
         Vd = Volumetric displacement (In Cubic Inches)
     
     */
+
+    //PSIA BUG 
 function airflowActual() {
     var hp = document.getElementById('hpTarget').value;
     var af = document.getElementById('afRatio').value;
