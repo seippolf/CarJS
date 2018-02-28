@@ -23,12 +23,12 @@
     
     */
 //Minimizing Clutter
-function getFloat(textValue) {
-    var newFloat = parseFloat(document.getElementById(textValue).value);
+function getFloat(elName) {
+    var newFloat = parseFloat(document.getElementById(elName).value);
     return newFloat;
 }
-function getSelect(selectValue) { 
-    var newSelect = document.getElementById(selectValue).value;
+function getSelect(elName) { 
+    var newSelect = document.getElementById(elName).value;
     return newSelect;
 }
 //Garrett Turbo Stuff...
@@ -47,11 +47,11 @@ function mapRequired() {
     var ve = getFloat('volEfficiency');
     var n = getFloat('engineSpeed');
     var vd = getFloat('volDisplacement');
-    var tempSelect = getSelect('tempUnit');//document.getElementById('tempUnit').value;
+    var tempSelect = getSelect('tempUnit');
     if(tempSelect == 'celsius') {
         tm = toFahrenheit(tm);
     }
-    var volSelect = getSelect('volUnit');//document.getElementById('volUnit').value;
+    var volSelect = getSelect('volUnit');
     if(volSelect == 'cubicCentimeters') {
         vd = ccImperial(vd);
     }
@@ -68,16 +68,23 @@ function mapRequired() {
         document.getElementById('mapReq').innerHTML = "Manifold Pressure Requirements: " + mp; 
     }
 }
-//Garrett uses the Imperial System... 
-function toFahrenheit(celsiusValue) { 
-    var fahrValue = (celsiusValue * 1.8) + 32;
+//Unit Conversions
+function toFahrenheit(elName) { 
+    var fahrValue = (elName * 1.8) + 32;
     return fahrValue;
 }
-function ccImperial(ccValue) {
-    var ciValue = ccValue * 0.0610237;
+function ccImperial(elName) {
+    var ciValue = elName * 0.0610237;
     return ciValue;
 }
-function literImperial(literValue) {
-    var ciValue = literValue * 61.0237;
+function literImperial(elName) {
+    var ciValue = elName * 61.0237;
     return ciValue;
+}
+//Error Checking
+function blurCheck(elName) {
+    var val = getFloat(elName);
+    if(isNaN(val)) {
+
+    }
 }
