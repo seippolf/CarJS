@@ -22,11 +22,16 @@
         Vd = Volumetric displacement (In Cubic Inches)
     
     */
-
+//Minimizing Clutter
 function getFloat(textValue) {
     var newFloat = parseFloat(document.getElementById(textValue).value);
     return newFloat;
 }
+function getSelect(selectValue) { 
+    var newSelect = document.getElementById(selectValue).value;
+    return newSelect;
+}
+//Garrett Turbo Stuff...
 function airflowActual() {
     var hp = getFloat('hpTarget');
     var af = getFloat('afRatio');
@@ -38,15 +43,15 @@ function airflowActual() {
 function mapRequired() {
     var wa = airflowActual();
     var r = 639.6;
-    var tm = getFloat('manTemperature');//document.getElementById('manTemperature').value;
-    var ve = getFloat('volEfficiency');//document.getElementById('volEfficiency').value;
-    var n = getFloat('engineSpeed');//document.getElementById('engineSpeed').value;
-    var vd = getFloat('volDisplacement');//document.getElementById('volDisplacement').value;
-    var tempSelect = document.getElementById('tempUnit').value;
+    var tm = getFloat('manTemperature');
+    var ve = getFloat('volEfficiency');
+    var n = getFloat('engineSpeed');
+    var vd = getFloat('volDisplacement');
+    var tempSelect = getSelect('tempUnit');//document.getElementById('tempUnit').value;
     if(tempSelect == 'celsius') {
         tm = toFahrenheit(tm);
     }
-    var volSelect = document.getElementById('volUnit').value;
+    var volSelect = getSelect('volUnit');//document.getElementById('volUnit').value;
     if(volSelect == 'cubicCentimeters') {
         vd = ccImperial(vd);
     }
