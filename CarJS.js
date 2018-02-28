@@ -23,11 +23,14 @@
     
     */
 
-    //PSIA BUG 
+function getFloat(textValue) {
+    var newFloat = parseFloat(document.getElementById(textValue).value);
+    return newFloat;
+}
 function airflowActual() {
-    var hp = document.getElementById('hpTarget').value;
-    var af = document.getElementById('afRatio').value;
-    var bsfc = document.getElementById('bsFuelConsumption').value; 
+    var hp = getFloat('hpTarget');
+    var af = getFloat('afRatio');
+    var bsfc = getFloat('bsFuelConsumption');
     var wa = hp * af * (bsfc/60);
     document.getElementById('airflowCalc').innerHTML = "Airflowactual: " + wa;
     return wa;
@@ -35,10 +38,10 @@ function airflowActual() {
 function mapRequired() {
     var wa = airflowActual();
     var r = 639.6;
-    var tm = document.getElementById('manTemperature').value;
-    var ve = document.getElementById('volEfficiency').value;
-    var n = document.getElementById('engineSpeed').value;
-    var vd = document.getElementById('volDisplacement').value;
+    var tm = getFloat('manTemperature');//document.getElementById('manTemperature').value;
+    var ve = getFloat('volEfficiency');//document.getElementById('volEfficiency').value;
+    var n = getFloat('engineSpeed');//document.getElementById('engineSpeed').value;
+    var vd = getFloat('volDisplacement');//document.getElementById('volDisplacement').value;
     var tempSelect = document.getElementById('tempUnit').value;
     if(tempSelect == 'celsius') {
         tm = toFahrenheit(tm);
