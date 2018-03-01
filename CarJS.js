@@ -24,12 +24,10 @@
     */
 //Minimizing Clutter
 function getFloat(elName) {
-    var newFloat = parseFloat(document.getElementById(elName).value);
-    return newFloat;
+    return parseFloat(document.getElementById(elName).value);
 }
 function getSelect(elName) { 
-    var newSelect = document.getElementById(elName).value;
-    return newSelect;
+    return document.getElementById(elName).value;
 }
 //Garrett Turbo Stuff...
 function airflowActual() {
@@ -70,16 +68,13 @@ function mapRequired() {
 }
 //Unit Conversions
 function toFahrenheit(elName) { 
-    var fahrValue = (elName * 1.8) + 32;
-    return fahrValue;
+    return ((elName * 1.8) + 32);
 }
 function ccImperial(elName) {
-    var ciValue = elName * 0.0610237;
-    return ciValue;
+    return elName * 0.0610237;
 }
 function literImperial(elName) {
-    var ciValue = elName * 61.0237;
-    return ciValue;
+    return elName * 61.0237;
 }
 //Error Checking
 function blurCheck(elName) {
