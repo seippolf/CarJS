@@ -22,18 +22,12 @@
         Vd = Volumetric displacement (In Cubic Inches)
     
     */
-//Minimizing Clutter
-function getFloat(elName) {
-    return parseFloat(document.getElementById(elName).value);
-}
-function getSelect(elName) { 
-    return document.getElementById(elName).value;
-}
+
 //Garrett Turbo Stuff...
 function airflowActual() {
-    var hp = getFloat('hpTarget');
-    var af = getFloat('afRatio');
-    var bsfc = getFloat('bsFuelConsumption');
+    var hp = getDouble('hpTarget');
+    var af = getDouble('afRatio');
+    var bsfc = getDouble('bsFuelConsumption');
     var wa = hp * af * (bsfc/60);
     document.getElementById('airflowCalc').innerHTML = "Airflowactual: " + wa;
     return wa;
@@ -41,10 +35,10 @@ function airflowActual() {
 function mapRequired() {
     var wa = airflowActual();
     var r = 639.6;
-    var tm = getFloat('manTemperature');
-    var ve = getFloat('volEfficiency');
-    var n = getFloat('engineSpeed');
-    var vd = getFloat('volDisplacement');
+    var tm = getDouble('manTemperature');
+    var ve = getDouble('volEfficiency');
+    var n = getDouble('engineSpeed');
+    var vd = getDouble('volDisplacement');
     var tempSelect = getSelect('tempUnit');
     if(tempSelect == 'celsius') {
         tm = toFahrenheit(tm);
@@ -65,6 +59,13 @@ function mapRequired() {
     else {
         document.getElementById('mapReq').innerHTML = "Manifold Pressure Requirements: " + mp; 
     }
+}
+//Minimizing Clutter
+function getDouble(elName) {
+    return parseDouble(document.getElementById(elName).value);
+}
+function getSelect(elName) { 
+    return document.getElementById(elName).value;
 }
 //Unit Conversions
 function toFahrenheit(elName) { 
