@@ -79,8 +79,7 @@ function literImperial(elName) {
 }
 //Error Checking
 function blurCheck(elName) {
-    var val = getFloat(elName);
-    if(isNaN(val)) {
-
-    }
+    document.getElementById(elName).style.border = "1px solid blue";
+    var elValue = document.getElementById(elName).value;
+    alert(elValue);
 }
