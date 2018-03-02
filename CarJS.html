@@ -8,23 +8,23 @@
         <h1>CarJS</h1>
         <input type="text" placeholder="Horsepower Target" id="hpTarget" onblur="blurCheck('hpTarget')">
         </br>
-        <input type="text" placeholder="Air/Fuel Ratio" id="afRatio">
+        <input type="text" placeholder="Air/Fuel Ratio" id="afRatio" onblur="blurCheck('afRatio')">
         </br>
-        <input type="text" placeholder="BSFC" id="bsFuelConsumption">
+        <input type="text" placeholder="BSFC" id="bsFuelConsumption" onblur="blurCheck('bsFuelConsumption')">
         </br>
         <button onclick="airflowActual()">Calculate</button>
         <p id="airflowCalc">Airflowactual: </p>
-        <input type="text" placeholder="Manifold Temperature" id="manTemperature">
+        <input type="text" placeholder="Manifold Temperature" id="manTemperature" onblur="blurCheck('manTemperature')">
         <select id="tempUnit">
             <option value="fahrenheit">Fahrenheit</option>
             <option value="celsius">Celsius</option>
         </select>
         </br>
-        <input type="text" placeholder="Volumetric Efficiency" id="volEfficiency">
+        <input type="text" placeholder="Volumetric Efficiency" id="volEfficiency" onblur="blurCheck('volEfficiency')">
         </br>
-        <input type="text" placeholder="Engine Speed (RPM)" id="engineSpeed">
+        <input type="text" placeholder="Engine Speed (RPM)" id="engineSpeed" onblur="blurCheck('engineSpeed')">
         </br>
-        <input type="text" placeholder="Volumetric Displacement" id="volDisplacement">
+        <input type="text" placeholder="Volumetric Displacement" id="volDisplacement" onblur="blurCheck('volDisplacement')">
         <select id="volUnit">
             <option value="cubicInches">CI</option>
             <option value="liters">Liter(s)</option>
