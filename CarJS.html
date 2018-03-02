@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <link rel="stylesheet" href="CarJS.css">
+    </head>
     <body>
         <script type="text/javascript" src="CarJS.js"></script>
         <h1>CarJS</h1>
@@ -13,8 +16,8 @@
         <p id="airflowCalc">Airflowactual: </p>
         <input type="text" placeholder="Manifold Temperature" id="manTemperature">
         <select id="tempUnit">
-            <option value="celsius">Celsius</option>
             <option value="fahrenheit">Fahrenheit</option>
+            <option value="celsius">Celsius</option>
         </select>
         </br>
         <input type="text" placeholder="Volumetric Efficiency" id="volEfficiency">
@@ -23,9 +26,9 @@
         </br>
         <input type="text" placeholder="Volumetric Displacement" id="volDisplacement">
         <select id="volUnit">
-            <option value="cubicCentimeters">CC</option>
-            <option value="liters">Liter(s)</option>
             <option value="cubicInches">CI</option>
+            <option value="liters">Liter(s)</option>
+            <option value="cubicCentimeters">CC</option>
         </select>
         </br>        
         <button onclick="mapRequired()">Calculate</button>

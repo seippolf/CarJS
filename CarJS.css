@@ -1,8 +1,12 @@
 body {
     
 }
-select{
+input {
     border-width: 1px;
     border-style: solid;
     border-color: black;
+    margin: 3px;
+}
+select {
+
 }
