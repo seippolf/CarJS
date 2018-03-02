@@ -25,9 +25,9 @@
 
 //Garrett Turbo Stuff...
 function airflowActual() {
-    var hp = getDouble('hpTarget');
-    var af = getDouble('afRatio');
-    var bsfc = getDouble('bsFuelConsumption');
+    var hp = getFloat('hpTarget');
+    var af = getFloat('afRatio');
+    var bsfc = getFloat('bsFuelConsumption');
     var wa = hp * af * (bsfc/60);
     document.getElementById('airflowCalc').innerHTML = "Airflowactual: " + wa;
     return wa;
@@ -35,10 +35,10 @@ function airflowActual() {
 function mapRequired() {
     var wa = airflowActual();
     var r = 639.6;
-    var tm = getDouble('manTemperature');
-    var ve = getDouble('volEfficiency');
-    var n = getDouble('engineSpeed');
-    var vd = getDouble('volDisplacement');
+    var tm = getFloat('manTemperature');
+    var ve = getFloat('volEfficiency');
+    var n = getFloat('engineSpeed');
+    var vd = getFloat('volDisplacement');
     var tempSelect = getSelect('tempUnit');
     if(tempSelect == 'celsius') {
         tm = toFahrenheit(tm);
@@ -62,7 +62,7 @@ function mapRequired() {
 }
 //Minimizing Clutter
 function getDouble(elName) {
-    return parseDouble(document.getElementById(elName).value);
+    return parseFloat(document.getElementById(elName).value);
 }
 function getSelect(elName) { 
     return document.getElementById(elName).value;
@@ -79,7 +79,12 @@ function literImperial(elName) {
 }
 //Error Checking
 function blurCheck(elName) {
-    document.getElementById(elName).style.border = "1px solid blue";
     var elValue = document.getElementById(elName).value;
-    alert(elValue);
+    //alert(elValue);
+    if(isNaN(parseFloat(elValue))) {
+        document.getElementById(elName).style.border = "1px solid red";
+    }
+    else {
+        document.getElementById(elName).style.border = "";
+    }
 }
