@@ -5,10 +5,26 @@
     </head>
     <body>
         <script type="text/javascript" src="CarJS.js"></script>
-        <div id="banner">
-            <h1 id="carJS-heading">CarJS</h1>
+        <div class="navbar">
+            <div class="logo">
+                <!-- <img src="CarJS-logo.png" alt="CarJS"> -->
+                CarJS
+            </div>
+            <div class="dropdown">
+                <button class="dropbutton" onclick="dropDown('dropdown-equations')">
+                    Equations    
+                </button>
+                <div class="dropdown-menu" id="dropdown-equations">
+                    <a>
+                        Turbo Calculator
+                    </a>
+                </div>
+            </div>
         </div>
         <div id="user-body">
+            <h2>
+                Turbo Calculator
+            </h2>
             <input type="text" placeholder="Horsepower Target" id="hpTarget" onblur="blurCheck('hpTarget')">
             </br>
             <input type="text" placeholder="Air/Fuel Ratio" id="afRatio" onblur="blurCheck('afRatio')">

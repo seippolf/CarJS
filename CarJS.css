@@ -2,9 +2,11 @@ body {
     margin: 0;
     padding: 0;
 }
-#carJS-heading{
+.logo{
+    overflow: hidden;
     margin: 0;
     padding: 0;
+    float: left;
 }
 input {
     border-width: 1px;
@@ -15,7 +17,38 @@ input {
 select {
 
 }
-#banner{
+.navbar{
+    overflow: hidden;
     background-color:  #FF4C4D;
-    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.dropdown {
+    overflow: hidden;
+    float: left;
+}
+.dropdown .dropbutton {
+    border: none;
+    outline: none;
+    background-color: inherit;
+    margin: 0;
+}
+.dropdown:hover .dropbutton, .dropbutton:focus {
+    background-color: #fff;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    margin: 0;
+    z-index: 1;
+}
+.show {
+    display: block;
+}
+.dropdown-menu a {
+    float: none;
+    background-color: lightgray;
+}
+.dropdown-menu a:hover {
+    background-color: grey;
 }

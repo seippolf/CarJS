@@ -88,3 +88,7 @@ function blurCheck(elName) {
         document.getElementById(elName).style.border = "";
     }
 }
+//Dropdown Menu
+function dropDown(elName) {
+    document.getElementById(elName).classList.toggle("show");
+}
