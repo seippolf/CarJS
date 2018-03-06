@@ -92,3 +92,11 @@ function blurCheck(elName) {
 function dropDown(elName) {
     document.getElementById(elName).classList.toggle("show");
 }
+window.onclick = function(e) {
+    if(!e.target.matches('.dropbutton')) {
+        var DropdownID = document.getElementById("dropdown-equations");
+        if(DropdownID.classList.contains('show')) {
+            DropdownID.classList.remove('show');
+        }
+    }
+}
