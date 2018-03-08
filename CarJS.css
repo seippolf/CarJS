@@ -47,6 +47,7 @@ select {
     display: block;
 }
 .dropdown-menu a {
+    display: block;
     float: none;
     background-color: lightgray;
 }
