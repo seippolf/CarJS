@@ -1,12 +1,16 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 .logo{
     overflow: hidden;
     margin: 0;
     padding: 0;
     float: left;
+}
+.logo img{
+    height: 32px;
 }
 input {
     border-width: 1px;
@@ -32,9 +36,13 @@ select {
     outline: none;
     background-color: inherit;
     margin: 0;
+    padding: 0.25em;
+    font-size: 32px;
+
 }
 .dropdown:hover .dropbutton, .dropbutton:focus {
     background-color: #fff;
+    cursor: pointer;
 }
 .dropdown-menu {
     display: none;
@@ -53,4 +61,6 @@ select {
 }
 .dropdown-menu a:hover {
     background-color: grey;
+    cursor: pointer;
+
 }
