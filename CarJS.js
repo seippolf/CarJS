@@ -54,7 +54,7 @@ function mapRequired() {
     if(ve <= 0 || n <= 0 || vd <= 0) {
     //If this information was used... I fear what would happen. That's why it isn't shown.
         alert("Less than zero... this is impossible.");
-        document.getElementById('mapReq').innerHTML = "Manifold Pressure Requirements: NaN"; 
+        document.getElementById('mapReq').innerHTML = "Manifold Pressure Requirements: Null"; 
     }
     else {
         document.getElementById('mapReq').innerHTML = "Manifold Pressure Requirements: " + mp; 
@@ -80,7 +80,6 @@ function literImperial(elName) {
 //Error Checking
 function blurCheck(elName) {
     var elValue = document.getElementById(elName).value;
-    //alert(elValue);
     if(isNaN(Number(elValue))) {
         document.getElementById(elName).style.border = "1px solid red";
     }
